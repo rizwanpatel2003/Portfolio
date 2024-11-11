@@ -1,18 +1,35 @@
-import type { Config } from "tailwindcss";
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
-export default {
+
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        'dot-bg': '#0A0A0A',
+        'dot-color': '#848282',
       },
+      spacing: {
+        'dot-size': '1px',
+        'dot-space': '50px',
+      },
+      fontFamily: {
+         "Doto": ["Doto"],
+         "Rampart": ["Rampart One", "cursive"],
+         "Jersey 25":["Jersey 25"],
+       },
     },
   },
   plugins: [],
-} satisfies Config;
+};
+

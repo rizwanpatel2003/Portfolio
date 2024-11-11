@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,4 +21,10 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+.dot-background {
+  background:
+    linear-gradient(90deg, theme('colors.dot-bg') calc(theme('spacing.dot-space') - theme('spacing.dot-size')), transparent 1%) center / theme('spacing.dot-space') theme('spacing.dot-space'),
+    linear-gradient(theme('colors.dot-bg') calc(theme('spacing.dot-space') - theme('spacing.dot-size')), transparent 1%) center / theme('spacing.dot-space') theme('spacing.dot-space'),
+    theme('colors.dot-color');
 }
