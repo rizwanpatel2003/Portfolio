@@ -9,7 +9,7 @@ import {
  
 } from "@tabler/icons-react";
 import { ButtonsCard } from './buttonui';
-import { useForm } from 'react-hook-form';
+
 
 function Fotter() {
   interface Social { 
@@ -25,14 +25,10 @@ const items: Social[] = [
 ] as Social[];
   
 
-const {
-  register,
-  handleSubmit,
-  formState: { errors },
-        } = useForm();
+
 
     return (
-      <form onSubmit={handleSubmit((data) => console.log(data))}>
+  
         <div className="dot-background w-full h-screen flex items-center">
    
         <div className="w-1/2 p-[10vh] h-[400px] bg-transparent flex flex-col items-center justify-between ">
@@ -49,16 +45,16 @@ const {
                 <div className="w-4/5">
                  
                   <input type="text" className=" w-full h-10 rounded-md text-black font-Rampart" placeholder="Name"
-                  {...register('name')}/>
+                 />
                 </div>
                 <div className="w-4/5">
                  
                   <input type="text" className=" w-full h-10 rounded-md text-black font-Rampart" placeholder="Email"
-                  {...register('email')} />
+                   />
                 </div>
                 <div className="w-4/5">
                  
-                  <input type="text" className=" w-full h-24 rounded-md text-black font-Rampart" placeholder="Message" {...register('message')} />
+                  <input type="text" className=" w-full h-24 rounded-md text-black font-Rampart" placeholder="Message"  />
                 </div>
                 <div>
                 <ButtonsCard className='w-24 bg-transparent border-0'>
@@ -73,7 +69,7 @@ const {
         </div>
        
       </div>
-      </form>      
+         
         )
 }
 
