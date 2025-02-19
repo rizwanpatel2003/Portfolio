@@ -3,7 +3,6 @@
 import Fotter from "./components/ui/fotter";
 import Greeting from "./components/ui/Greeting";
 import { MacbookScroll } from "./components/ui/keybord";
-
 import Moon from "./components/ui/moon";
 import { FloatingNav } from "./components/ui/navar";
 import LandingProducts from "./components/ui/projects";

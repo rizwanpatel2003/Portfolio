@@ -9,8 +9,7 @@ import {
  
 } from "@tabler/icons-react";
 import { ButtonsCard } from './buttonui';
-import { useForm } from "react-hook-form";
-
+import { useForm } from 'react-hook-form';
 
 function Fotter() {
   interface Social { 
