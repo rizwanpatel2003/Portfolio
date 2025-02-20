@@ -84,16 +84,18 @@ export const FloatingNav = ({
             <span className="block sm:hidden text-white">Home</span>
             <span className="hidden sm:block text-sm text-white">Home</span>
           </Link>
-          <Link
+          <div
          
-            href={"/Projects"}
+             onClick={()=>{
+              window.scrollTo(0,1400);
+             }}
             className={cn(
               "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
             )}
           >
             <span className="block sm:hidden text-white">Projects</span>
             <span className="hidden sm:block text-sm text-white">Projects</span>
-          </Link>
+          </div>
           <Link
          
             href={"/contact"}

@@ -20,8 +20,8 @@ function Fotter() {
 
 const items: Social[] = [
     { title: "Twitter", icon:   <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />, href: "https://twitter.com" },
-    { title: "Github", icon:  <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />, href: "https://facebook.com" },
-    { title: "LinkedIn", icon: <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />, href: "https://instagram.com" },
+    { title: "Github", icon:  <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />, href: "https://github.com/rizwanpatel2003" },
+    { title: "LinkedIn", icon: <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />, href: "www.linkedin.com/in/rizwanpatel-malipatel-a79431244" },
 ] as Social[];
   
 
@@ -31,9 +31,9 @@ const items: Social[] = [
   
         <div className="dot-background w-full h-screen flex items-center">
    
-        <div className="w-1/2 p-[10vh] h-[400px] bg-transparent flex flex-col items-center justify-between ">
+        <div className="w-1/2 p-[4vh] md:p-[10vh] h-[400px] bg-transparent flex flex-col items-center justify-between ">
        <div className=" text-2xl " > Let's Connect! 💌</div>
-       <div className="text-pretty">If you ever want to grab a coffee/bubble tea (virtually) or just want a quick chat - you can find me on social media or 
+       <div className="text-pretty text-[10px] md:text-xs">If you ever want to grab a coffee/bubble tea (virtually) or just want a quick chat - you can find me on social media or 
         you can send me a message here!  </div> 
         <div>
         <FloatingDockDesktop items={items} className=''></FloatingDockDesktop>

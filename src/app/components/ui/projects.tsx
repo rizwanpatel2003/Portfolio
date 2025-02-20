@@ -4,11 +4,15 @@
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useRouter } from 'next/navigation';
+
 
 
 
 gsap.registerPlugin(ScrollTrigger);
 function  LandingProducts() {
+  const router = useRouter();
+
      useGSAP(()=>{
       gsap.to('#box1',{
            
@@ -18,7 +22,7 @@ function  LandingProducts() {
        scrollTrigger:{
         trigger:"#box1",
         scroller:"body",
-        markers:true,
+        markers:false,
         start:"top 30%",
         end:"bottom 15%",
         scrub:1,
@@ -34,7 +38,7 @@ function  LandingProducts() {
          scrollTrigger:{
           trigger:"#box2",
           scroller:"body",
-          markers:true,
+          markers:false,
           start:"top 30%",
           end:"bottom 15%",
           scrub:1,
@@ -73,19 +77,24 @@ function  LandingProducts() {
    <>
     
    
-   <div className=' w-full  flex  items-center justify-evenly gap-10 flex-col mt-10 dot-background' id='head'>
+   <div className=' w-full  flex  items-center justify-evenly gap-16 flex-col mt-10 dot-background' id='head'>
            <h1 className=' text-center  mt-3 font-Rampart font-semibold  text-4xl underline-offset-8 underline decoration-white'>My projects</h1>
-        <div className=' w-2/3 md:w-1/3  h-[350px] md:h-[500px]    bg-white sticky top-5 bg-[url(https://i.pinimg.com/474x/bc/25/94/bc2594d95abbc1d9cbca435d35d4c8df.jpg)] bg-cover flex flex-col justify-end ' id='box1'>
-        <h1 className="font-serif text-xl text-white m-2 font-extrabold "> Classic Black goggles </h1>
-        <h1 className="font-serif text-xl text-white m-2 font-extrabold "> 99$ </h1>
+        <div className=' w-[90%] md:w-[60%]  h-[350px] md:h-[500px]    bg-white sticky top-5   flex flex-col justify-end shadow-sm shadow-white rounded-md bg-cover overflow-hidden ' style={{backgroundImage: `url('/landingpic.png')`}} id='box1' onClick={()=>{
+           router.push('https://github.com/rizwanpatel2003/comfy')
+        }}>
+        <h1 className="font-serif  bg-gradient-to-r from-green-300 to-yellow-300 bg-clip-text text-transparent text-md md:text-2xl font-bold bg-cover "> Comfy -Ecommerce </h1>
+        <h1 className="font-serif bg-gradient-to-r from-green-300 to-yellow-300 bg-clip-text text-transparent text-sm md:text-2xl font-bold"> MERN Stack </h1>
               </div>
-              <div className=' w-2/3 md:w-1/3   h-[350px] md:h-[500px]   bg-white sticky top-5 bg-[url(https://i.pinimg.com/474x/c4/66/2f/c4662f7cf88b671a3fc65283f53ae2ff.jpg)] bg-cover flex flex-col justify-end ' id='box2'>
-              <h1 className="font-serif text-xl text-white m-2 font-extrabold "> Classic Comfort chino pants </h1>
-              <h1 className="font-serif text-xl text-white m-2 font-extrabold "> 129$ </h1>
+              <div className=' w-[90%] md:w-[60%]   h-[350px] md:h-[500px]   bg-white sticky top-5  bg-cover flex flex-col justify-end shadow-sm shadow-white rounded-md '  style={{backgroundImage: `url('/scamImg.png')`}} id='box2' onClick={()=>{
+           router.push('https://github.com/rizwanpatel2003/Scambaiters')
+        }}>
+              <h1 className="font-serif bg-gradient-to-r from-green-300 to-yellow-300 bg-clip-text text-transparent text-md md:text-2xl font-bold ">Scambaiter-Social Welfare</h1>
+              <h1 className="font-serif bg-gradient-to-r from-green-300 to-yellow-300 bg-clip-text text-transparent text-sm md:text-xl font-bold"> Next.js</h1>
               </div>
-              <div className=' w-2/3 md:w-1/3  h-[350px] md:h-[500px]    bg-white bg-[url(https://i.pinimg.com/474x/4b/0a/e7/4b0ae7ee6b486b1922d5b3dbc48537b4.jpg)] bg-cover flex flex-col justify-end  ' id='box3'>
-              <h1 className="font-serif text-xl text-white m-2 font-extrabold "> Classic Comfort jeans jacket </h1>
-              <h1 className="font-serif text-xl text-white m-2 font-extrabold "> 159$ </h1>
+              <div className=' w-[90%] md:w-2/3  h-[350px] md:h-[500px]    bg-white  bg-cover flex flex-col justify-end shadow-sm shadow-white rounded-md '    style={{backgroundImage: `url('/portfolioimg.png')`}} id='box3'  onClick={()=>{
+           router.push('https://github.com/rizwanpatel2003/Portfolio')}}>
+              <h1 className="font-serif bg-gradient-to-r from-green-300 to-yellow-300 bg-clip-text text-transparent text-md md:text-2xl font-bold "> Portfolio- Innovative web design</h1>
+              <h1 className="font-serif bg-gradient-to-r from-green-300 to-yellow-300 bg-clip-text text-transparent text-sm md:text-xl font-bold"> Next.js</h1>
               </div>
               
    </div>
